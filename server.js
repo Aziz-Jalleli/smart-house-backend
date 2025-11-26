@@ -8,8 +8,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017/smarthouse')
-  .then(() => console.log("MongoDB connecté ✅"))
+mongoose.connect('mongodb+srv://azizjallali99_db_user:0KdEGBYvyJfGsrTi@cluster0.lcjuawi.mongodb.net/smarthouse?retryWrites=true&w=majority')
+  .then(() => console.log("MongoDB Atlas connecté ✅"))
   .catch(err => console.log(err));
 
 
