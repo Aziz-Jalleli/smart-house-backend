@@ -1,0 +1,19 @@
+{
+  "name": "smart-house-backend",
+  "version": "1.0.0",
+  "description": "Backend Smart House IoT",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["iot", "smart-house", "nodejs", "express", "mongodb"],
+  "author": "Mohamed Aziz Jallali",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongoose": "^9.0.0"
+  }
+}
+
