@@ -8,13 +8,14 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect('mongodb://localhost:27017/smarthouse')
+  .then(() => console.log("MongoDB connecté ✅"))
+  .catch(err => console.log(err));
+
 
 app.use('/api/sensor', sensorRoutes);
 
-aconst PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, "0.0.0.0", () => console.log(`API en ligne sur port ${PORT}`));
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
 
